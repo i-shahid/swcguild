@@ -1,0 +1,35 @@
+Given a string and an index, return a string length 2 starting at the given index. If the index is too big or too small to define a string length 2, use the first 2 chars. The string length will be at least 2. 
+
+TakeTwoFromPosition("java", 0) -> "ja"
+TakeTwoFromPosition("java", 2) -> "va"
+TakeTwoFromPosition("java", 3) -> "ja"
+
+public string TakeTwoFromPosition(string str, int n) {
+
+}
+
+------------------solution------------------
+
+public string TakeTwoFromPosition(string str, int n)
+        {
+            if (n > 2 || n < 2)
+            {
+                return str.Substring(0, 2);
+            }
+            else
+            {
+                return str.Substring(n, 2);
+            }
+
+---
+
+	[TestCase("java", 0, "ja")]
+        [TestCase("java", 2, "va")]
+        [TestCase("java", 3, "ja")]
+
+        public void TakeTwoFromPosition(string str, int n, string expected)
+        {
+            Strings obj = new Strings();
+            string actual = obj.TakeTwoFromPosition(str, n);
+            Assert.AreEqual(expected, actual);
+        }

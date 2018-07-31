@@ -1,0 +1,32 @@
+The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in. 
+
+sleepIn(false, false) -> true
+sleepIn(true, false) -> false
+sleepIn(false, true) -> true
+
+public bool CanSleepIn(bool isWeekday, bool isVacation) {
+  
+}
+
+----------Solution----------
+
+ public bool SleepIn(bool isWeekday, bool isVacation)
+        {
+            if (isVacation || !isWeekday)
+                return true;
+
+            return false;
+        }
+
+---testcase---
+
+	[TestCase(false, false, true)]
+        [TestCase(true, false, false)]
+        [TestCase(false, true, true)]
+
+        public void SleepIn(bool isWeekday, bool isVacation, bool expected)
+        {
+            Conditionals obj = new Conditionals();
+            bool actual = obj.SleepIn(isWeekday, isVacation);
+            Assert.AreEqual(expected, actual);
+        }

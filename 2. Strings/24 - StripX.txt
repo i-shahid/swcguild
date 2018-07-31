@@ -1,0 +1,43 @@
+Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and otherwise return the string unchanged. 
+
+StripX("xHix") -> "Hi"
+StripX("xHi") -> "Hi"
+StripX("Hxix") -> "Hxi"
+
+public string StripX(string str) {
+
+}
+
+
+------------------solution------------------
+	public string StripX(string str)
+        {
+            if (str.Substring(0, 1) == "x" && str.Substring(str.Length - 1) == "x")
+            {
+                return str.Substring(1, str.Length - 2);
+            }
+           else  if (str.Substring(0, 1) == "x")
+            {
+                return str.Substring(1);
+            }
+            if (str.Substring(str.Length - 1) == "x")
+            {
+                return str.Substring(0, str.Length - 1);
+            }
+            else
+            {
+                return str;
+            }
+
+---
+
+	[TestCase("xHix", "Hi")]
+        [TestCase("xHi", "Hi")]
+        [TestCase("Hxix", "Hxi")]
+
+        public void StripX(string str, string expected)
+        {
+            Strings obj = new Strings();
+            string actual = obj.StripX(str);
+            Assert.AreEqual(expected, actual);
+        }

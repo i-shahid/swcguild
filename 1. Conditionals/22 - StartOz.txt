@@ -1,0 +1,47 @@
+Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz". 
+
+StartOz("ozymandias") -> "oz"
+StartOz("bzoo") -> "z"
+StartOz("oxx") -> "o"
+
+public string StartOz(string str) {
+
+}
+
+----------Solution----------
+
+ public string StartOz(string str)
+        {
+            
+            if ((str.Substring(0, 1) == "o") && (str.Substring(1, 1) == "z"))
+            {
+                return str.Substring(0, 2);
+            }
+
+            else if (str.Substring(0, 1) == "o")
+            {
+                return str.Substring(0, 1);
+            }
+            else if (str.Substring(1, 1) == "z")
+            {
+                return str.Substring(1, 1);
+            }
+            else
+            {
+                return str;
+            }
+        }
+
+---testcase---
+
+
+	[TestCase("ozmandias", "oz")]
+        [TestCase("bzoo", "z")]
+        [TestCase("oxx", "o")]
+
+        public void StartOz(string str, string expected)
+        {
+            Conditionals obj = new Conditionals();
+            string actual = obj.StartOz(str);
+            Assert.AreEqual(expected, actual);
+        }

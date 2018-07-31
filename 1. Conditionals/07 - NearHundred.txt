@@ -1,0 +1,36 @@
+Given an int n, return true if it is within 10 of 100 or 200.
+Hint: Check out the C# Math class for absolute value
+
+NearHundred(103) -> true
+NearHundred(90) -> true
+NearHundred(89) -> false
+
+public bool NearHundred(int n) {
+
+}
+----------Solution----------
+
+public bool NearHundred(int n)
+        {
+            if (Math.Abs(n-100) <= 10  || Math.Abs(n-200) <= 10)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+---testcase---
+
+	[TestCase(103, true)]
+        [TestCase(90, true)]
+        [TestCase(89, false)]
+
+        public void NearHundred(int n, bool expected)
+        {
+            Conditionals obj = new Conditionals();
+            bool actual = obj.NearHundred(n);
+            Assert.AreEqual(expected, actual);
+        }

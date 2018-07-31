@@ -1,0 +1,40 @@
+Given two strings, append them together (known as "concatenation") and return the result. However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string. So "Hello" and "Hi" yield "loHi". The strings may be any length. 
+
+MinCat("Hello", "Hi") -> "loHi"
+MinCat("Hello", "java") -> "ellojava"
+MinCat("java", "Hello") -> "javaello"
+
+public string MinCat(string a, string b) {
+
+}
+
+------------------solution------------------
+
+ public string MinCat(string a, string b)
+        {
+            int aLength = a.Length;
+            int bLength = b.Length;
+            int diff = Math.Abs(aLength - bLength);
+
+            if (aLength > bLength)
+            {
+                return a.Substring(diff) + b;
+            }
+            if (bLength > aLength)
+            {
+                return a + b.Substring(diff);
+            }
+            return a + b;
+        }
+---
+
+ 	[TestCase("Hello", "Hi", "loHi")]
+        [TestCase("Hello", "java", "ellojava")]
+        [TestCase("java", "Hello", "javaello")]
+
+        public void MinCat(string a, string b, string expected)
+        {
+            Strings obj = new Strings();
+            string actual = obj.MinCat(a, b);
+            Assert.AreEqual(expected, actual);
+        }

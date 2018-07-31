@@ -1,0 +1,34 @@
+Given a string, return true if the first 2 chars in the string also appear at the end of the string, such as with "edited". 
+
+FrontAgain("edited") -> true
+FrontAgain("edit") -> false
+FrontAgain("ed") -> true
+
+public bool FrontAgain(string str) {
+
+}
+
+------------------solution------------------
+
+        public bool FrontAgain(string str)
+        {
+            if (str.Substring(0, 2) == str.Substring(str.Length - 2))
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
+---
+
+	[TestCase("edited", true)]
+        [TestCase("edit", false)]
+        [TestCase("ed", true)]
+
+        public void FrontAgain(string str, bool expected)
+        {
+            Strings obj = new Strings();
+            bool actual = obj.FrontAgain(str);
+            Assert.AreEqual(expected, actual);
+        }

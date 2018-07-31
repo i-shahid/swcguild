@@ -1,0 +1,34 @@
+Given two int values, return their sum. However, if the two values are the same, then return double their sum. 
+
+SumDouble(1, 2) -> 3
+SumDouble(3, 2) -> 5
+SumDouble(2, 2) -> 8
+
+public int SumDouble(int a, int b) {
+  
+}
+
+----------Solution----------
+
+public int SumDouble(int a, int b)
+        {
+            if (a == b)
+            {
+                return (a + b)*2;
+            }
+            else
+            {
+                return a + b;
+            }
+---testcase---
+
+	[TestCase(1, 2, 3)]
+        [TestCase(3, 2, 5)]
+        [TestCase(2, 2, 8)]
+
+        public void SumDouble(int a, int b, int expected)
+        {
+            Conditionals obj = new Conditionals();
+            int actual = obj.SumDouble(a, b);
+            Assert.AreEqual(expected, actual);
+        }

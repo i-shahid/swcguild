@@ -1,0 +1,33 @@
+Given a string, return true if the string starts with "hi" and false otherwise. 
+
+StartHi("hi there") -> true
+StartHi("hi") -> true
+StartHi("high up") -> false
+
+public bool StartHi(string str) {
+
+}
+
+----------Solution----------
+
+public bool StartHi(string str)
+        {
+            if (str.StartsWith("hi ") || (str.Length == 2 && str.Substring(0, 2) == "hi"))
+            {
+                return true;
+            }
+            return false;
+        }
+
+---testcase---
+
+	[TestCase("hi there", true)]
+        [TestCase("hi", true)]
+        [TestCase("high up", false)]
+
+        public void StartHi(string str, bool expected)
+        {
+            Conditionals obj = new Conditionals();
+            bool actual = obj.StartHi(str);
+            Assert.AreEqual(expected, actual);
+        }

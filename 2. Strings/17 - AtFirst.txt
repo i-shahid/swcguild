@@ -1,0 +1,37 @@
+Given a string, return a string length 2 made of its first 2 chars. If the string length is less than 2, use '@' for the missing chars. 
+
+AtFirst("hello") -> "he"
+AtFirst("hi") -> "hi"
+AtFirst("h") -> "h@"
+
+public string AtFirst(string str) {
+
+}
+
+------------------solution------------------
+	public string AtFirst(string str)
+        {
+            if (str.Length < 2)
+            {
+                return str + "@";
+            }
+            else
+            {
+                return str.Substring(0, 2);
+            }
+        }
+
+---
+
+
+
+ 	[TestCase("hello", "he")]
+        [TestCase("hi", "hi")]
+        [TestCase("h", "h@")]
+
+        public void AtFirst(string str, string expected)
+        {
+            Strings obj = new Strings();
+            string actual = obj.AtFirst(str);
+            Assert.AreEqual(expected, actual);
+        }

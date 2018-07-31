@@ -1,0 +1,30 @@
+Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (Don't check for bad index). 
+
+MissingChar("kitten", 1) -> "ktten"
+MissingChar("kitten", 0) -> "itten"
+MissingChar("kitten", 4) -> "kittn"
+
+public string MissingChar(string str, int n) {
+  
+}
+
+----------Solution----------
+
+public string MissingChar(string str, int n)
+        {
+            return str.Remove(n, 1);
+
+        }
+
+---testcase---
+
+[TestCase("candy", "not candy")]
+        [TestCase("x", "not x")]
+        [TestCase("not bad", "not bad")]
+
+        public void NotString(string s, string expected)
+        {
+            Conditionals obj = new Conditionals();
+            string actual = obj.NotString(s);
+            Assert.AreEqual(expected, actual);
+        }

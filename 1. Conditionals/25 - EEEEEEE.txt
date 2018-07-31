@@ -1,0 +1,41 @@
+Return true if the given string contains between 1 and 3 'e' chars. 
+
+GotE("Hello") -> true
+GotE("Heelle") -> true
+GotE("Heelele") -> false
+
+public bool GotE(string str) {
+
+}
+
+----------Solution----------
+
+public bool GotE(string str)
+        {
+            int count = 0;
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i].ToString() == "e")
+
+                    count++;
+            }
+            if (count >=1 && count <= 3)
+            {
+                return true;
+            }
+            return false;
+        }
+
+---testcase---
+
+	[TestCase("Hello", true)]
+        [TestCase("Heelle", true)]
+        [TestCase("Heelele", false)]
+
+        public void GotE(string str, bool expected)
+        {
+            Conditionals obj = new Conditionals();
+            bool actual = obj.GotE(str);
+            Assert.AreEqual(expected, actual);
+        }

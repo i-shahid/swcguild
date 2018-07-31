@@ -1,0 +1,65 @@
+
+Given a string, return a version without the first 2 chars. Except keep the first char if it is 'a' and keep the second char if it is 'b'. The string may be any length.
+
+TweakFront("Hello") -> "llo"
+TweakFront("away") -> "aay"
+TweakFront("abed") -> "abed"
+
+public string TweakFront(string str) {
+
+}
+
+------------------solution------------------
+
+solution1
+---------
+	string result = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if ((i == 0 && str.Substring(0, 1) != "a")||(i == 1 && str.Substring(1,1) != "b"))
+                {
+                    continue;
+                }
+                result += str.Substring(i, 1);
+            }
+            return result;
+
+--------
+solutin2
+--------
+	string isA = str.Substring(0, 1);
+            string isB = str.Substring(1, 1);
+
+            string afterAb = str.Substring(2);
+            string notA = str.Substring(1);
+            string notB = isA + afterAb;
+
+            if (str.Substring(0, 1) == "a" && str.Substring(1, 1) == "b")
+            {
+                return str;
+            }
+            else if (str.Substring(0, 1) != "a" && str.Substring(1, 1) == "b")
+            {
+                return isB + afterAb;
+            }
+            else if (str.Substring(0, 1) == "a" && str.Substring(1, 1) != "b")
+            {
+                return isA + afterAb;
+            }
+            else
+            {
+                return afterAb;
+            }
+
+---
+
+	[TestCase("Hello", "llo")]
+        [TestCase("away", "aay")]
+        [TestCase("abed", "abed")]
+
+        public void TweakFront(string a, string expected)
+        {
+            Strings obj = new Strings();
+            string actual = obj.TweakFront(a);
+            Assert.AreEqual(expected, actual);
+        }

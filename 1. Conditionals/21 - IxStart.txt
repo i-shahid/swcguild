@@ -1,0 +1,35 @@
+Return true if the given string begins with "*ix", the '*' can be anything, so "pix", "9ix" .. all count. 
+
+IxStart("mix snacks") -> true
+IxStart("pix snacks") -> true
+IxStart("piz snacks") -> false
+
+public bool IxStart(string str) {
+
+}
+
+----------Solution----------
+
+//#21 IxStart
+        public bool IxStart(string str)
+        {
+            if (str.Substring(1,2) == "ix")
+            {
+                return true;
+            }
+            return false;
+        }
+
+---testcase---
+
+[TestCase("mix snacks", true)]
+        [TestCase("pix snacks", true)]
+        [TestCase("piz snacks", false)]
+
+        public void IxStart(string str, bool expected)
+        {
+            Conditionals obj = new Conditionals();
+            bool actual = obj.IxStart(str);
+            Assert.AreEqual(expected, actual);
+        }
+    }

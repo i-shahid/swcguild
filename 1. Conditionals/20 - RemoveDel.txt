@@ -1,0 +1,31 @@
+Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged. 
+
+RemoveDel("adelbc") -> "abc"
+RemoveDel("adelHello") -> "aHello"
+RemoveDel("adedbc") -> "adedbc"
+
+public string RemoveDel(string str) {
+
+}
+----------Solution----------
+
+public string RemoveDel(string str)
+        {
+            if (str.Substring(1,3) == "del")
+            {
+                return str.Remove(1, 3);
+            }
+            return str;
+
+---testcase---
+
+  [TestCase("adelbc", "abc")]
+        [TestCase("adelHello", "aHello")]
+        [TestCase("adedbc", "adedbc")]
+
+        public void RemoveDel(string str, string expected)
+        {
+            Conditionals obj = new Conditionals();
+            string actual = obj.RemoveDel(str);
+            Assert.AreEqual(expected, actual);
+        }

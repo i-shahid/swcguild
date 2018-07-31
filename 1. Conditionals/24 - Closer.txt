@@ -1,0 +1,43 @@
+Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie. 
+
+Closer(8, 13) -> 8
+Closer(13, 8) -> 8
+Closer(13, 7) -> 0
+
+public int Closer(int a, int b) {
+
+}
+
+----------Solution----------
+public int Closer(int a, int b)
+        {
+            int Answer = 0;
+
+            if (Math.Abs(a-10) == Math.Abs(b-10))
+            {
+                Answer = 0;
+            }
+            else if (Math.Abs(a-10) < Math.Abs(b-10))
+            {
+                Answer = a;
+            }
+            else if (Math.Abs(b-10) < Math.Abs(a-10))
+            {
+                Answer = b;
+            }
+            return Answer;
+        }
+
+
+---testcase---
+
+[TestCase(8, 13, 8)]
+        [TestCase(13, 8, 8)]
+        [TestCase(13, 7, 0)]
+
+        public void Closer(int a, int b, int expected)
+        {
+            Conditionals obj = new Conditionals();
+            int actual = obj.Closer(a, b);
+            Assert.AreEqual(expected, actual);
+        }

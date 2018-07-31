@@ -1,0 +1,36 @@
+Given two strings, append them together (known as "concatenation") and return the result. However, if the concatenation creates a double-char, then omit one of the chars, so "abc" and "cat" yields "abcat". 
+
+ConCat("abc", "cat") -> "abcat"
+ConCat("dog", "cat") -> "dogcat"
+ConCat("abc", "") -> "abc"
+
+public string ConCat(string a, string b) {
+
+}
+
+------------------solution------------------
+
+	public string ConCat(string a, string b)
+        {
+            if (a.Length == 0 || b.Length == 0)
+            {
+                return a + b;
+            }
+                if (a.Substring(a.Length - 1) == b.Substring(0, 1))
+                {
+                    return a+b.Remove(0, 1);
+                }
+                return a + b;
+        }
+---
+
+	[TestCase("abc", "cat", "abcat")]
+        [TestCase("dog", "cat", "dogcat")]
+        [TestCase("abc", "", "abc")]
+
+        public void ConCat(string a, string b, string expected)
+        {
+            Strings obj = new Strings();
+            string actual = obj.ConCat(a, b);
+            Assert.AreEqual(expected, actual);
+        }

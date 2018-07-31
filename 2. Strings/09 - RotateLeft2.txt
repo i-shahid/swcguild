@@ -1,0 +1,38 @@
+Given a string, return a "rotated left 2" version where the first 2 chars are moved to the end. The string length will be at least 2. 
+
+Rotateleft2("Hello") -> "lloHe"
+Rotateleft2("java") -> "vaja"
+Rotateleft2("Hi") -> "Hi"
+
+public string Rotateleft2(string str) {
+
+}
+
+------------------solution------------------
+
+public string RotateLeft2(string str)
+        {
+            if (str.Length > 2)
+            {
+                string Rest = str.Substring(2);
+                string FirstTwo = str.Substring(0, 2);
+                string result = Rest + FirstTwo;
+                return result;
+            }
+            
+            else
+            {
+                return str; 
+            }
+
+---
+ 	[TestCase("Hello", "lloHe")]
+        [TestCase("java", "vaja")]
+        [TestCase("Hi", "Hi")]
+
+        public void RotateLeft2(string str, string expected)
+        {
+            Strings obj = new Strings();
+            string actual = obj.RotateLeft2(str);
+            Assert.AreEqual(expected, actual);
+        }

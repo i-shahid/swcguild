@@ -1,0 +1,46 @@
+Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so "coding" yields "codign". 
+
+SwapLast("coding") -> "codign"
+SwapLast("cat") -> "cta"
+SwapLast("ab") -> "ba"
+
+public string SwapLast(string str) {
+
+}
+
+------------------solution------------------
+solutin1
+
+string secondTolast = str [str.Length-2].ToString()
+string lastLetter = str[str.Length-1].ToString()
+
+return str.Substring(0, str.Length-2) + secondToLast + lastLetter;
+
+---------
+solution2
+
+	public string SwapLast(string str)
+        {
+            if (str.Length >= 2)
+            {
+                return str.Substring(0, str.Length - 2) + str.Substring(str.Length - 1, 1) +
+                       str.Substring(str.Length - 2, 1);
+            }
+            else
+            {
+                return str;
+            }	
+
+---
+
+	[TestCase("coding", "codign")]
+        [TestCase("cat", "cta")]
+        [TestCase("ab", "ba")]
+
+        public void SwapLast(string str, string expected)
+        {
+            Strings obj = new Strings();
+            string actual = obj.SwapLast(str);
+            Assert.AreEqual(expected, actual);
+        }
+    }

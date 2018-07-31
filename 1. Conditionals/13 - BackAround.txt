@@ -1,0 +1,43 @@
+Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". The original string will be length 1 or more. 
+
+BackAround("cat") -> "tcatt"
+BackAround("Hello") -> "oHelloo"
+BackAround("a") -> "aaa"
+
+public string BackAround(string str) {
+
+}
+
+----------Solution----------
+
+public string BackAround(string str)
+        {
+            string Last = str.Substring(str.Length - 1);
+
+            return Last + str + Last;
+        }
+
+--solution2---
+
+ 	char LastLetter = str[str.Length - 1];
+
+            if (str.Length < 2)
+            {
+                return string.Format("{0}{0}{0}", str);
+            }else
+            {
+                return string.Format("{0}{1}{0}", LastLetter, str);
+            }
+
+---testcase---
+
+	[TestCase("cat", "tcatt")]
+        [TestCase("Hello", "oHelloo")]
+        [TestCase("a", "aaa")]
+
+        public void BackAround(string str, string expected)
+        {
+            Conditionals obj = new Conditionals();
+            string actual = obj.BackAround(str);
+            Assert.AreEqual(expected, actual);
+        }

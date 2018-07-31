@@ -1,0 +1,34 @@
+Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2. 
+
+MultipleEndings("Hello") -> "lololo"
+MultipleEndings("ab") -> "ababab"
+MultipleEndings("Hi") -> "HiHiHi"
+
+public string MultipleEndings(string str) {
+}
+------------------solution------------------
+
+        public string MultipleEndings(string str)
+        {
+            string lastwo = str.Substring(str.Length -2, 2);
+            return string.Format("{0}{0}{0}", lastwo);
+
+        }
+
+----
+
+	[TestCase("Hello", "lololo")]
+        [TestCase("ab", "ababab")]
+        [TestCase("Hi", "HiHiHi")]
+
+        public void MultipleEndings(string str, string expected)
+        {
+            //arrange
+            Strings obj = new Strings();
+
+            //act
+            string actual = obj.MultipleEndings(str);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }

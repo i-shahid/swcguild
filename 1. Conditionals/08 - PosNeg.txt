@@ -1,0 +1,40 @@
+Given two int values, return true if one is negative and one is positive. Except if the parameter "negative" is true, then return true only if both are negative. 
+
+PosNeg(1, -1, false) -> true
+PosNeg(-1, 1, false) -> true
+PosNeg(-4, -5, true) -> true
+
+public bool PosNeg(int a, int b, bool negative) {
+
+}
+
+----------Solution----------
+
+ public bool PosNeg(int a, int b, bool negative)
+        {
+            if (negative && (a < 0 && b < 0))
+            {
+                return true;
+            }
+            else if ((a < 0 && b > 0) || (a > 0 && b < 0))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+---testcase---
+
+[TestCase(1, -1, false, true)]
+        [TestCase(-1, 1, false, true)]
+        [TestCase(-4, -5, true, true)]
+
+        public void PosNeg(int a, int b, bool negative, bool expected)
+        {
+            Conditionals obj = new Conditionals();
+            bool actual = obj.PosNeg(a, b, negative);
+            Assert.AreEqual(expected, actual);
+        }

@@ -1,0 +1,36 @@
+Given a string, return a version without the first and last char, so "Hello" yields "ell". The string length will be at least 2. 
+
+TrimOne("Hello") -> "ell"
+TrimOne("java") -> "av"
+TrimOne("coding") -> "odin"
+
+public string TrimOne(string str) {
+
+}
+
+------------------solution------------------
+//TrimOne
+        public string TrimOne(string str)
+        {
+            
+            string middle = str.Substring(1, str.Length -2);
+            return middle;
+        }
+
+
+---
+	[TestCase("Hello", "ell")]
+        [TestCase("java", "av")]
+        [TestCase("coding", "odin")]
+
+        public void TrimOne(string str, string expected)
+        {
+            //arrange
+            Strings obj = new Strings();
+
+            //act
+            string actual = obj.TrimOne(str);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+

@@ -1,0 +1,33 @@
+Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod" operator
+
+Multiple3or5(3) -> true
+Multiple3or5(10) -> true
+Multiple3or5(8) -> false
+
+public bool Multiple3or5(int number) {
+
+}
+
+----------Solution----------
+public bool Multiple3or5(int number)
+        {
+            
+            if (number % 3 == 0 || number % 5 == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+---testcase---
+
+	[TestCase(3, true)]
+        [TestCase(10, true)]
+        [TestCase(8, false)]
+
+        public void Multiple3or5(int number, bool expected)
+        {
+            Conditionals obj = new Conditionals();
+            bool actual = obj.Multiple3or5(number);
+            Assert.AreEqual(expected, actual);
+        }

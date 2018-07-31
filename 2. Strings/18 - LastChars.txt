@@ -1,0 +1,41 @@
+Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char. 
+
+LastChars("last", "chars") -> "ls"
+LastChars("yo", "mama") -> "ya"
+LastChars("hi", "") -> "h@"
+
+public string LastChars(string a, string b) {
+
+}
+
+------------------solution------------------
+
+        public string LastChars(string a, string b)
+        {
+            if (a.Length == 0)
+            {
+                return "@" + b.Substring(b.Length - 1);
+
+            }
+            else if (b.Length == 0)
+            {
+                return a.Substring(0, 1) + "@";
+            }
+            else
+            {
+                return a.Substring(0, 1) + b.Substring(b.Length - 1, 1);
+            }
+        }
+---
+
+	[TestCase("last", "chars", "ls")]
+        [TestCase("yo", "mama", "ya")]
+        [TestCase("hi", "", "h@")]
+
+        public void LastChars(string a, string b, string expected)
+        {
+            Strings obj = new Strings();
+            string actual = obj.LastChars(a, b);
+            Assert.AreEqual(expected, actual);
+        }
+
