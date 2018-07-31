@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Biryani Palace</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<style>
+			hr {border-style: inset;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<header>
+				<h1>Biryani Palace</h1>
+			</header>
+		</div>
+		<hr>
+		<div class="container">
+			<ul class="nav nav-pills list-inline">
+				<li><a href="Home.html"><span class="glyphicon glyphicon-home"></a></li>
+				<li><a href="Menu.html">Menu</a></li>
+				<li><a href="Contact Us.html">Contact Us</a></li>
+			</ul>
+		</div>
+		<hr>
+		<section>
+			<div class="containter-fluid">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="Name">Name:</label>
+						<div class="col-sm-4">
+							<input type="name" class="form-control" id="name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="Phone">Phone:</label>
+						<div class="col-sm-4">
+							<input type="phone" class="form-control" id="phone">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="Reason for Inquiry">Reason for Inquiry:</label>
+						<div class="col-sm-4">
+							<select type="Reason" class="form-control" id="Reason">
+								<option value="Catering">Catering</option>
+								<option value="Private Party">Private Party</option>
+								<option value="Feedback">Feedback</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="Additional Information:">Additional Information:</label>
+						<div class="col-sm-4">
+							<textarea name="message" class="form-control" rows="10" cols="23"></textarea></td>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="Have you been to the restaurant?">Have you been to the restaurant?</label>
+						<div class="col-sm-4">
+							<input type="radio" name="trip" id="No"; value="No" size="30" checked><label for="No">No</label> <input type="radio" name="trip" id="Yes"; value="Yes"><label for="Yes">Yes</label></td>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="Best days to contact you:">Best days to contact you:</label>
+						<div class="col-sm-4">
+							<input type="checkbox" name="days" value="Monday"> M <input type="checkbox" name="days" value="Tuesday"> T <input type="checkbox" name="days" value="Wednesday"> W <input type="checkbox" name="days" value="Thursday"> Th <input type="checkbox" name="days" value="Friay"> F
+						</div>
+					</div>
+						<div class="form-group">
+							<div class="col-sm-4"></div>
+							<div class="col-sm-4 text-right";>
+								<button type="submit" value="Send Request">Send Request</button>
+							</div>
+							<div class="col-sm-4"></div>
+							</div>
+						</div>
+				</form>
+			</div>
+		</section>
+		<hr>
+		<footer>
+			<div class="row">
+					<div class="col-sm-12"></div>
+						<p>411 Food Street, Austin, TX 76726</p>
+						<p>512-655-1236</p>
+				</div>
+		</footer>
+	</body>
+</html>

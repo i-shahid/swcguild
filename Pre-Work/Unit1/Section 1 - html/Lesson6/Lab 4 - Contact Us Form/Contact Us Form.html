@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Us Form</title>
+		<style>
+			table {border-spacing: 20px;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<table>
+				<colgroup><col align="right"></col><col align="left"></col></colgroup>
+				<tr>
+					<td align="right">First Name:</td>
+					<td><input type="text" size="30"></td>
+				</tr>
+				<tr>
+					<td align="right">Last Name:</td>
+					<td><input type="text" size="30"></td>
+				</tr>
+				<tr>
+					<td align="right">Email:</td>
+					<td><input type="text" size="30"></td>
+				</tr>
+				<tr>
+					<td align="right">Type of License:</td>
+					<td><input type="radio" name="License" value="Business" size="30" checked>Business <input type="radio" name="License" value="Personal">Personal</td>
+				</tr>
+				<tr>
+					<td align="right">Reason:</td>
+					<td>
+						<select name="Options" style="width:90%">
+							<option value="Select a Reason">Select a Reason</option>
+							<option value="Software Support">Software Support</option>
+							<option value="Hardware Support">Hardware Support</option>
+							<option value="Information Request">Information Requestion</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right" valign="top">Additional Information:</td>
+					<td><textarea name="message" rows="5" cols="23"></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="checkbox" name="Terms" value="Terms of Service"> I have read the terms of service.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="center"><input type="submit" value="Send Request"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

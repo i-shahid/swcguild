@@ -1,0 +1,11 @@
+header, footer {text-align:center;}
+@font-face {
+			font-family: Lobster;
+			font-style: normal;
+			src: url(https://fonts.googleapis.com/css?family=Lobster);
+			}
+#name {font-family: Lobster, sans-serif;}
+a:link{text-decoration: underline;}
+a:visited{color: gray;}
+a:hover{font-weight: bold;}
+a:active{text-decoration: none;}

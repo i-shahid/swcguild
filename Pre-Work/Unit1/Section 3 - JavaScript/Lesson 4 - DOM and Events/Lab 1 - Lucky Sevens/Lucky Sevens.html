@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Lucky Seven</title>
+	<meta charset="utf-8">
+	<style>
+		.name {text-align:center;}
+	</style>
+</head>
+<body>
+		<header>
+			<h2 class="name">Lucky Sevens</h2>
+		</header>
+<section>
+	<form class="name" role="form">
+		<div>
+			<label for="Starting Bet">Starting Bet:</label>
+			<input type="amount" onclick="dollar" id="bet">
+		</div>
+		<br>
+		<button type="button" onclick="roll()">Play</button>
+	</form>
+	<script type="text/javascript">
+		var dollar = prompt("How many dollars do you have to bet?");
+		var dice1 = math.floor(math.random(1,7));
+		var dice2 = math.floor(math.random(1,7));
+		var dice3 = dice1 + dice2;
+		
+		document.getElementById('bet').innerHTML = remaining
+	</script>
+</section>
+</body>
+</html>

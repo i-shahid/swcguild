@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Biryani Palace</title>
+		<link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+		<style>
+			#form {border-spacing: 15px}
+			#navigation {width: 25%;}
+			.fields {text-align: right; font-weight: bold; }
+			#fields1 {text-align: right; vertical-align: top}
+			#c1 {text-align: right;}
+			#c2 {text-align: left;}
+			#list {width: 100%}		
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1 id="name";>Biryani Palace</h1>
+		</header>
+		<hr>
+		<nav>
+			<table id="navigation">
+				<tr>
+					<td><a href="Home.html">Home</a></td>
+					<td><a href="Menu.html">Menu</a></td>
+					<td><a href="Contact Us.html">Contact Us</a></td>
+				</tr>
+			</table>
+		</nav>
+		<hr>
+		<section>
+			<form>
+				<table id="form">
+					<colgroup><col id="c1"></col><col id="c2"></col></colgroup>
+					<tr>
+						<td class="fields">Name:</td>
+						<td><input type="text" size="31"></td>
+					</tr>
+					<tr>
+						<td class="fields">Email:</td>
+						<td><input type="text" size="31"></td>
+					</tr>
+					<tr>
+						<td class="fields">Phone:</td>
+						<td><input type="text" size="31"></td>
+					</tr>
+					<tr>
+						<td class="fields">Reason for Inquiry:</td>
+						<td>
+							<select id="list" name="Reason">
+								<option value="Catering">Catering</option>
+								<option value="Private Party">Private Party</option>
+								<option value="Feedback">Feedback</option>
+								<option value="Other">Other</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td id="fields1">Additional Information:</td>
+						<td><textarea name="message" rows="10" cols="23"></textarea></td>
+					</tr>
+					<tr>
+						<td class="fields">Have you been to the restaurant?</td>
+						<td><input type="radio" name="trip" id="No"; value="No" size="30" checked><label for="No">No</label> <input type="radio" name="trip" id="Yes"; value="Yes"><label for="Yes">Yes</label></td>
+					</tr>
+					<tr>
+						<td class="fields">Best days to contact you:</td>
+						<td><input type="checkbox" name="days" value="Monday"> M <input type="checkbox" name="days" value="Tuesday"> T <input type="checkbox" name="days" value="Wednesday"> W <input type="checkbox" name="days" value="Thursday"> Th <input type="checkbox" name="days" value="Friay"> F</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="fields"><input type="submit" value="Send Request"></td>
+					</tr>
+				</table>
+			</form>
+		</section>
+		<hr>
+		<footer>
+			<p>411 Food Street, Austin, TX 76726</p>
+			<p>512-655-1236</p>
+		</footer>
+	</body>
+</html>
